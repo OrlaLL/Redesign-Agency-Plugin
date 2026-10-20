@@ -6,94 +6,43 @@ argument-hint: [URL ou pasta do projeto]
 
 # Conteúdo e copywriting
 
+Siga `project-governance` (veracidade, CTAs, leitura econômica, templates, status de verificação).
+
 ## Objetivo
 
-Produzir conteúdo realmente adequado à nova arquitetura, não apenas polir frases do site antigo. Reorganize, reescreva, condense ou expanda com intenção, preservando os fatos e registrando lacunas.
+Produzir conteúdo adequado à nova arquitetura, não polir frases do site antigo: reorganizar, reescrever, condensar ou expandir com intenção, preservando os fatos e registrando lacunas.
 
 ## Pré-requisitos
 
-Leia:
-- auditoria e inventário de páginas;
-- briefing estratégico;
-- sitemap proposto;
-- arquitetura da home;
-- critérios de aceitação;
-- registro de evidências.
-
-Se não houver arquitetura aprovada, sinalize o bloqueio antes de escrever uma versão final. É possível produzir um rascunho exploratório, mas rotule-o como provisório.
+`project-status.md`; resumos de `strategic-brief.md` (tom de voz completo) e `art-direction.md`, se existir; `sitemap-proposed.md`; `homepage-architecture.md`; `page-inventory.csv` e `evidence-register.csv` filtrados por página. Sem arquitetura aprovada, sinalize o bloqueio; um rascunho é possível, rotulado como provisório.
 
 ## Processo
 
-### 1. Criar inventário de conteúdo
-Para cada página e seção:
-- conteúdo original relevante;
-- destino proposto;
-- decisão: manter, reescrever, mover, combinar, dividir, remover ou criar;
-- justificativa;
-- fonte/evidência;
-- estado de aprovação.
-
-Não elimine silenciosamente informação importante. Quando remover conteúdo, registre a razão e o destino alternativo, se houver.
+### 1. Inventário de conteúdo
+Por página e seção: conteúdo original relevante; destino proposto; decisão (manter, reescrever, mover, combinar, dividir, remover, criar); justificativa; evidência; status. Conteúdo removido tem razão e destino alternativo registrados.
 
 ### 2. Escrever com propósito
-Para cada seção, determine a pergunta do usuário e a resposta principal. Escreva títulos informativos e específicos, parágrafos escaneáveis e listas apenas quando ajudarem a compreensão.
+Para cada seção, defina a pergunta do usuário e a resposta principal. Títulos informativos e específicos, parágrafos escaneáveis, listas só quando ajudam. Use o tom definido na estratégia. Evite clichês, copy intercambiável entre negócios, repetição de palavras-chave, falsa urgência e promessas de resposta rápida. Sem alegações médicas, financeiras, jurídicas ou de resultado não sustentadas.
 
-- Não use clichês sem evidência.
-- Não invente benefícios, diferenciais, serviços, garantias, credenciais, preços ou resultados.
-- Não crie falsa urgência nem promessas de resposta rápida.
-- Não transforme inferências em afirmações factuais.
-- Evite repetição de palavras-chave e copy genérica intercambiável entre negócios.
-- Use o tom de voz definido na estratégia.
-- Não faça alegações médicas, financeiras, jurídicas ou de resultados que não estejam sustentadas.
-
-### 3. Criar CTAs contextuais
-Para cada CTA, documente:
-- ID;
-- página/seção;
-- rótulo;
-- intenção;
-- destino;
-- comportamento;
-- mensagem predefinida, se aplicável;
-- origem da URL/contato;
-- status de verificação.
-
-Exemplos de destinos possíveis: página de serviço, formulário, agendamento, telefone, e-mail, rede social, WhatsApp ou âncora interna. Escolha de acordo com a intenção. Não use WhatsApp como destino universal.
-
-Não invente número, endereço, URL de agendamento nem link. Se o destino não for verificável, marque como pendente e não simule um link funcional.
+### 3. CTAs contextuais
+Preencha `cta-map.csv` (template) para cada CTA, incluindo mensagem predefinida quando aplicável e origem do contato. Escolha o destino pela intenção: página de serviço, formulário, agendamento, telefone, e-mail, rede social, WhatsApp ou âncora.
 
 ### 4. SEO e metadados
-Proponha title e meta description específicos para cada página, com nome da empresa, serviço e localidade somente quando verificados e relevantes. Escreva para pessoas; não force termos.
+Title e meta description específicos por página; nome, serviço e localidade só quando verificados e relevantes. Escreva para pessoas.
 
-### 5. Gerenciar lacunas
-Use marcadores de pendência fora da copy publicável, como `[CONFIRMAR: horário de atendimento]`. Nunca deixe placeholders no artefato apresentado como final.
+### 5. Lacunas
+Pendências usam `[CONFIRMAR: ...]` fora da copy publicável; nenhum placeholder no artefato final. Para seções dependentes de informação ausente, proponha omitir por ora, escrever sem a alegação ou pedir confirmação.
 
-Quando uma seção depende de informação não encontrada, proponha:
-- omitir por enquanto;
-- escrever sem a alegação pendente;
-- solicitar confirmação do cliente.
+### 6. Alinhamento com a direção de arte
+Identifique títulos, provas, números, citações e imagens que a composição aprovada exige e confirme se existem. Não force slogans, estatísticas, depoimentos ou textos decorativos para preencher layout.
 
 ## Artefatos
 
-Crie/atualize:
-- `03-conteudo/content-matrix.csv`
-- `03-conteudo/cta-map.csv`
-- `03-conteudo/copy-home.md`
-- `03-conteudo/copy-inner-pages.md`
-- metadados SEO por página, no mesmo documento ou arquivo dedicado.
+A partir dos templates: `03-conteudo/content-matrix.csv` e `03-conteudo/cta-map.csv`. Além deles: `03-conteudo/copy-home.md` e `03-conteudo/copy-inner-pages.md` (cada um com resumo para próximas etapas e metadados SEO por página).
 
-Colunas mínimas de `content-matrix.csv`:
-`source_url,proposed_url,section,original_content_summary,proposed_content,decision,rationale,evidence_ids,status,open_questions`
+## Checagem antes de entregar
+Matriz comparada ao inventário original; todos os serviços com destino; CTAs com intenção e destino coerentes; nenhuma alegação sem fonte; páginas internas não reduzidas a CTAs genéricos; texto final separado de pendências.
 
-Colunas mínimas de `cta-map.csv`:
-`cta_id,page_url,section,label,intent,destination_url,destination_type,verified,status,notes`
+## Gate
 
-## Revisão antes de entregar
-- Compare a matriz com o inventário original.
-- Confirme que todos os serviços relevantes têm destino definido.
-- Confirme que cada CTA possui intenção e destino coerentes.
-- Verifique se há alegações sem fonte.
-- Confirme que as páginas internas não foram reduzidas a CTAs genéricos.
-- Diferencie texto final de pendências.
-
-Finalize recomendando `/redesign-agency:prototipo`.
+Recomende `/redesign-agency:prototipo` só se a direção de arte estiver aprovada; caso contrário, `/redesign-agency:direcao-de-arte`.

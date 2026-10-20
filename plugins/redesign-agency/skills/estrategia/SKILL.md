@@ -6,104 +6,46 @@ argument-hint: [URL ou pasta do projeto]
 
 # Estratégia e arquitetura de website
 
+Siga `project-governance` (veracidade, CTAs, leitura econômica, templates, status de verificação).
+
 ## Objetivo
 
-Decidir o que o novo website precisa comunicar, quais páginas deve ter e qual função cada seção desempenha. Não comece pelo visual nem copie a arquitetura original por inércia.
+Decidir o que o novo site precisa comunicar, quais páginas terá e qual função cada seção cumpre, e entregar um briefing criativo útil à direção de arte, sem escolher detalhes visuais.
 
 ## Pré-requisitos
 
-Leia `audit-report.md`, `page-inventory.csv` e `evidence-register.csv`. Se não existirem, peça ao usuário para executar `/redesign-agency:auditoria` ou faça uma auditoria limitada explicitamente identificada. Não trate informações ausentes como fatos.
+`project-status.md`; resumo e seção de problemas priorizados de `audit-report.md`; `page-inventory.csv` e `evidence-register.csv` filtrados conforme a necessidade. Sem auditoria, peça `/redesign-agency:auditoria` ou faça uma auditoria limitada, explicitamente identificada.
 
 ## Processo
 
 ### 1. Sintetizar o diagnóstico
-- Selecione os problemas P0/P1 e as oportunidades com evidência.
-- Identifique o que funciona e deve ser preservado.
-- Relacione cada oportunidade a uma decisão estratégica proposta.
-- Não confunda preferências estéticas com problemas de negócio.
+Selecione P0/P1 e oportunidades com evidência; identifique o que preservar; ligue cada oportunidade a uma decisão proposta. Não confunda preferência estética com problema de negócio.
 
-### 2. Definir público e posicionamento
-Documente:
-- segmentos de público plausíveis e suas intenções;
-- tarefas, dúvidas e barreiras de decisão;
-- proposta de valor e diferenciais sustentados por evidência;
-- tom de voz e personalidade da marca;
-- informações pendentes que exigem validação do cliente.
+### 2. Público e posicionamento
+Segmentos e intenções; tarefas, dúvidas e barreiras de decisão; proposta de valor e diferenciais com evidência; tom de voz; pendências a validar com o cliente. Sem pesquisa de usuários, conclusões são hipóteses.
 
-Se não houver pesquisa de usuários, identifique as conclusões como hipóteses a validar. Não invente pesquisas, estatísticas ou insights de entrevistas.
+### 3. Objetivos e jornadas
+Objetivo primário e secundários; jornadas principais da entrada à ação; CTA adequado a cada contexto (conhecer, comparar, consultar, agendar, comprar, ligar, mensagem).
 
-### 3. Definir objetivos e jornadas
-- Defina o objetivo primário e os objetivos secundários do site.
-- Mapeie as jornadas mais importantes, desde a entrada até a ação.
-- Determine qual CTA faz sentido em cada contexto.
-- Diferencie intenção de conhecer, comparar, consultar, agendar, comprar, ligar ou enviar uma mensagem.
-- Não determine que todos os caminhos terminem no WhatsApp.
+### 4. Sitemap
+Compare atual e proposto. Para cada URL: manter, renomear, consolidar, dividir, remover ou criar, com justificativa (público, conteúdo, intenção de busca, negócio). Considere conteúdo valioso, páginas por serviço, profundidade, links internos, redirecionamentos e redundância.
 
-### 4. Propor sitemap
-Compare arquitetura atual e proposta. Para cada URL, decida manter, renomear, consolidar, dividir, remover ou criar. Justifique a decisão com base no público, conteúdo, intenção de busca e negócio.
+### 5. Arquitetura da home
+Por seção: ordem; objetivo do usuário; pergunta respondida; conteúdo e evidência necessários; CTA e destino; razão de existir; critério de sucesso; relação com páginas internas. A home resume e orienta; não substitui as páginas de serviço.
 
-Considere:
-- preservação de conteúdo valioso;
-- necessidade de páginas específicas para serviços;
-- profundidade de navegação;
-- links internos;
-- URLs e redirecionamentos, se aplicáveis;
-- prevenção de páginas redundantes.
+### 6. Requisitos de SEO
+Por página: intenção de busca; tópico principal (hipótese, sem dados de ferramenta); title, meta description e headings planejados; links internos; necessidade de conteúdo exclusivo; redirecionamentos a avaliar.
 
-Não crie páginas apenas para aumentar o número de páginas.
+### 7. Briefing criativo
+Em `strategic-brief.md`: atributos e percepção desejada; diferenciais comprovados; atributos visuais a evitar e por quê; expectativas do público quanto a confiança, clareza e personalidade; restrições e liberdade sobre a identidade atual; requisitos de acessibilidade, fotografia e ativos; referências do cliente (inspiração, não ordem de cópia).
 
-### 5. Definir a arquitetura da home
-Para cada seção, especifique:
-- ordem;
-- objetivo do usuário;
-- pergunta que responde;
-- conteúdo necessário;
-- evidência ou fonte necessária;
-- CTA e destino, se houver;
-- razão para incluir a seção;
-- critério de sucesso;
-- relação com páginas internas.
-
-A home deve resumir e orientar, não substituir automaticamente todas as páginas de serviços.
-
-### 6. Definir requisitos de SEO
-- Intenção de busca provável por página.
-- Palavra-chave/tópico principal como hipótese, quando não houver pesquisa de palavras-chave.
-- Title, meta description e hierarquia semântica planejados.
-- Links internos e relação entre páginas.
-- Necessidade de conteúdo exclusivo por serviço.
-- Redirecionamentos a avaliar se URLs forem alteradas.
-Não alegue volume, dificuldade ou posição de palavras-chave sem ferramenta/dados.
-
-### 7. Registrar critérios de aceitação
-Defina condições observáveis para avaliar o redesign, incluindo:
-- cobertura do conteúdo relevante;
-- arquitetura e navegação;
-- clareza dos serviços;
-- coerência dos CTAs;
-- requisitos responsivos;
-- SEO básico;
-- fidelidade factual;
-- requisitos específicos do cliente.
+### 8. Critérios de aceitação
+Parta do template e acrescente condições observáveis: cobertura de conteúdo, navegação, clareza dos serviços, coerência dos CTAs, responsividade, SEO básico, fidelidade factual e requisitos do cliente.
 
 ## Artefatos
 
-Crie/atualize:
-- `02-estrategia/strategic-brief.md`
-- `02-estrategia/sitemap-proposed.md`
-- `02-estrategia/homepage-architecture.md`
-- `00-project/acceptance-criteria.md`
-- `00-project/decisions-log.md`
-
-Inclua uma matriz de rastreabilidade: achado da auditoria → decisão estratégica → mudança proposta → critério de aceitação.
+`02-estrategia/strategic-brief.md` (com resumo para próximas etapas e matriz de rastreabilidade achado → decisão → mudança → critério), `02-estrategia/sitemap-proposed.md`, `02-estrategia/homepage-architecture.md`, `00-project/acceptance-criteria.md`, `00-project/decisions-log.md`.
 
 ## Gate
 
-A etapa só está pronta para conteúdo quando:
-- a arquitetura da home está definida;
-- as páginas existentes têm destino decidido ou pendência documentada;
-- objetivos e públicos estão descritos;
-- requisitos de SEO estão registrados;
-- decisões sem evidência estão marcadas como hipóteses.
-
-Finalize recomendando `/redesign-agency:conteudo`.
+Pronta quando: arquitetura da home definida; cada página existente com destino decidido ou pendência documentada; objetivos e públicos descritos; SEO registrado; decisões sem evidência marcadas como hipóteses. Recomende `/redesign-agency:direcao-de-arte` antes de `/redesign-agency:conteudo` (o conteúdo pode ser rascunhado em paralelo; o protótipo depende da direção aprovada).

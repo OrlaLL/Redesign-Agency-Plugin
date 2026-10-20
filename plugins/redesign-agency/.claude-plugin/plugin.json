@@ -1,8 +1,8 @@
 {
   "name": "redesign-agency",
-  "version": "0.1.0",
-  "description": "Fluxo profissional de redesign de websites: auditoria, estratégia, conteúdo, prototipação, revisão, refinamento e implementação.",
+  "version": "0.3.0",
+  "description": "Workflow de redesign de websites com direção de arte aprovada, rastreabilidade e QA da auditoria à implementação.",
   "author": {
-    "name": "Redesign Agency POC"
+    "name": "Orlando Libardi"
   }
 }

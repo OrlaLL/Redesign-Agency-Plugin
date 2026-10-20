@@ -8,3 +8,4 @@
 | AC-004 | Não há alegações factuais sem fonte | Bloqueador | Revisar conteúdo contra registro de evidências | | | Pendente |
 | AC-005 | Layout não apresenta overflow nas larguras requeridas | Alta | Inspecionar navegador nas larguras definidas | | | Pendente |
 | AC-006 | Metadados essenciais estão presentes | Média | Inspecionar HTML/renderização | | | Pendente |
+| AC-007 | Todos os itens do `## Checklist visual` de `04-prototipo/art-direction.md` (AD-xx) passaram | Alta | Avaliar critério por critério na página renderizada | | | Pendente |

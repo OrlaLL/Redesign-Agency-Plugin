@@ -1,4 +1,3 @@
-
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "redesign-agency-marketplace",
@@ -13,8 +12,8 @@
       "author": {
         "name": "Orlando Libardi"
       },
-      "description": "Workflow completo de redesign de websites, da auditoria à implementação.",
-      "version": "0.1.0",
+      "description": "Workflow de redesign de websites com direção de arte aprovada, rastreabilidade e QA da auditoria à implementação.",
+      "version": "0.3.0",
       "source": "./plugins/redesign-agency",
       "category": "productivity"
     }

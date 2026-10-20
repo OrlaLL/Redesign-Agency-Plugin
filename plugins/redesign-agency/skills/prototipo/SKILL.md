@@ -4,78 +4,40 @@ description: Cria um protótipo navegável para avaliar a direção visual e a e
 argument-hint: [URL ou pasta do projeto]
 ---
 
-# Prototipação de website — Modelo C
+# Prototipação de website
+
+Siga `project-governance` (veracidade, CTAs, leitura econômica, economia de capturas, status de verificação).
 
 ## Objetivo
 
-Transformar estratégia e conteúdo em um protótipo visual navegável para revisão. O protótipo deve representar decisões reais do projeto, não ser um template genérico com o conteúdo antigo.
+Transformar estratégia, conteúdo e direção de arte aprovada em um protótipo navegável que represente decisões reais do projeto, não um template genérico com o conteúdo antigo.
 
 ## Pré-requisitos
 
-Leia estratégia, sitemap, arquitetura da home, conteúdo e mapa de CTAs. Se faltar material, liste as lacunas. Não preencha informações comerciais com invenções.
+`project-status.md`; `art-direction.md` completo (é o contrato visual) e `design-tokens.css`, se existir; `homepage-architecture.md`; `sitemap-proposed.md`; `copy-home.md` e `copy-inner-pages.md`; `cta-map.csv`. Os demais artefatos só pelo resumo. A direção precisa estar aprovada no log. Se estiver ausente, não aprovada ou vaga demais, interrompa e recomende `/redesign-agency:direcao-de-arte`; um wireframe estrutural exploratório só se for útil e solicitado.
 
 ## Processo
 
-### 1. Preparar direção de arte
-Crie `04-prototipo/art-direction.md` com:
-- personalidade visual e razões;
-- relação com a marca original;
-- público e contexto de decisão;
-- referências visuais (se fornecidas ou pesquisadas, registre origem);
-- paleta proposta e contraste;
-- tipografia;
-- grid, escala de espaçamento e largura de conteúdo;
-- tratamento de imagens;
-- comportamento responsivo;
-- componentes e estados de interação;
-- elementos que diferenciam a página de um template genérico.
+### 1. Aplicar a direção aprovada
+Não crie direção nova nem edite `art-direction.md`. Use o `## Checklist visual` dele como guia de construção; registre conflitos em `prototype-spec.md`. Divergência relevante exige registro de motivo, impacto e alternativa, e aprovação.
 
-Não force uma estética fixa (por exemplo, serifas elegantes e neutros quentes) em todas as marcas. O design deve responder ao briefing.
+### 2. Planejar a experiência
+Antes de codificar: composição do hero; ordem e ritmo das seções com variação intencional; hierarquia dos serviços; prova social só se real; imagens com propósito; navegação entre páginas; estados de hover, foco, erro e sucesso; comportamento mobile. Número de colunas segue a natureza do conteúdo; carrossel ou animação só com motivo funcional.
 
-### 2. Desenhar a experiência
-Antes de codificar, planeje:
-- composição do hero;
-- ordem e ritmo das seções;
-- variação intencional entre blocos;
-- hierarquia dos serviços;
-- prova social apenas se real;
-- uso de imagens com propósito;
-- navegação entre páginas;
-- estados de hover, foco, erro e sucesso quando aplicáveis;
-- comportamento mobile.
+### 3. Construir
+Padrão: HTML/CSS/JS autocontido e navegável, salvo indicação de Figma ou outra ferramenta (com Figma MCP disponível; não declare uso se não houve).
+- Prototipe as páginas internas críticas do sitemap ou documente quais ficaram fora do escopo.
+- Navegação leva à página/âncora correspondente; CTAs seguem `cta-map.csv`.
+- Use ativos do cliente quando apropriado; registre placeholders e ativos ausentes.
+- Foco em composição e hierarquia; não precisa estar otimizado para produção.
 
-A quantidade de colunas deve corresponder à natureza do conteúdo. Não use uma grade só porque cabe. Não inclua carrossel ou animação sem motivo funcional.
+### 4. Verificação mínima
+Com navegador: links e CTAs pelo DOM; capturas em 375 e 1440 px para hierarquia, overflow e imagens quebradas. Sem navegador: validação estática, declarando que a inspeção visual não foi feita.
 
-### 3. Construir o protótipo
-Preferência da POC: HTML/CSS/JS autocontido e navegável, salvo se o usuário indicar Figma ou outra ferramenta. Se houver Figma MCP e permissões adequadas, ele pode ser usado para criar/editar frames e componentes. Não declare que o Figma foi utilizado se não foi.
+## Artefatos
 
-- Crie uma página que possa ser aberta e inspecionada.
-- Se o sitemap inclui páginas internas, não reduza tudo a uma home com botões para contato. Prototipe as páginas críticas ou documente claramente quais ficaram fora do escopo.
-- Links de navegação devem levar à página/âncora correspondente quando disponível.
-- CTAs devem respeitar `cta-map.csv`.
-- Use ativos do cliente quando disponíveis e apropriados; registre placeholders e ativos ausentes.
-- Não invente depoimentos, logos de clientes ou fotos que pareçam representar pessoas reais do negócio.
-- O protótipo deve permitir avaliar composição e hierarquia, não precisa ainda ser otimizado para produção.
-
-### 4. Entregáveis
-Crie/atualize:
-- `04-prototipo/art-direction.md`
-- `04-prototipo/prototype-spec.md`
-- arquivos do protótipo dentro de `04-prototipo/prototype/`
-
-O `prototype-spec.md` deve mapear cada seção do protótipo para a arquitetura aprovada e identificar a origem de cada ativo importante.
-
-### 5. Verificação mínima
-Se houver navegador:
-- abra o protótipo;
-- capture ou inspecione desktop e mobile;
-- teste navegação e CTAs principais;
-- observe overflow, imagens quebradas e hierarquia visual.
-
-Se não houver navegador, valide o código estático na medida possível e declare que a inspeção visual não foi executada.
+`04-prototipo/prototype/` (arquivos do protótipo) e `04-prototipo/prototype-spec.md` (resumo para próximas etapas; mapa seção do protótipo → arquitetura aprovada; origem de cada ativo importante; conflitos com a direção).
 
 ## Gate
 
-O protótipo está pronto para revisão quando é possível avaliar a estrutura, a hierarquia, os ativos, os destinos de navegação e os principais comportamentos. Não confunda “arquivo HTML criado” com “protótipo validado”.
-
-Finalize recomendando `/redesign-agency:revisao`.
+Pronto para revisão quando estrutura, hierarquia, ativos, destinos de navegação e principais comportamentos podem ser avaliados. "Arquivo HTML criado" não é "protótipo validado". Recomende `/redesign-agency:revisao` e declare se a inspeção foi renderizada ou apenas estática.

@@ -6,62 +6,37 @@ argument-hint: [URL ou pasta do projeto]
 
 # Refinamento visual e de interação
 
+Siga `project-governance` (veracidade, leitura econômica, economia de capturas, status de verificação).
+
 ## Objetivo
 
-Aplicar melhorias concretas ao protótipo com base na revisão aprovada. Não se limite a produzir recomendações; implemente as correções possíveis e registre o que foi alterado.
+Implementar as correções da revisão no protótipo, não apenas recomendá-las, e registrar o que mudou.
 
 ## Pré-requisitos
 
-Leia `prototype-review.md`, `art-direction.md`, `prototype-spec.md`, os arquivos do protótipo e os documentos de estratégia/conteúdo. Respeite as decisões aprovadas. Se uma correção exigir mudança estratégica, peça decisão ou registre-a como proposta, sem alterar silenciosamente o escopo.
+`project-status.md`; `prototype-review.md` completo; `## Checklist visual` de `art-direction.md` (normativo); `prototype-spec.md`; arquivos do protótipo. Estratégia e conteúdo só quando uma correção os afetar. Correção que exija mudança estratégica: peça decisão ou registre como proposta.
 
 ## Processo
 
-### 1. Transformar revisão em tarefas
-Crie uma lista com ID, prioridade, arquivo/seção afetada, problema, correção, critério de aceite e status. Resolva primeiro bloqueadores e P1.
+### 1. Lista de tarefas
+Converta os achados em tarefas (ID do achado, prioridade, arquivo/seção, correção, critério de aceite, status). Bloqueadores e P1 primeiro.
 
-### 2. Refinar o design com intenção
-Exemplos de problemas a procurar e corrigir:
-- depoimentos sem contexto visual suficiente ou sem avatar/ilustração apropriada; não invente fotos de usuários nem apresente avatar ilustrativo como pessoa real;
-- números ou estatísticas que perdem hierarquia;
-- grids com número de colunas inadequado ao tipo e volume do conteúdo;
-- cards repetitivos que não ajudam a comparar;
-- imagens genéricas, mal recortadas ou com proporção incorreta;
-- seções sem ritmo visual ou que parecem pertencer a outro site;
-- tipografia, espaçamento e alinhamento inconsistentes;
-- contraste insuficiente;
-- estados de hover/foco ausentes;
-- animações que não explicam nem melhoram a experiência;
-- transições no scroll excessivas, pesadas ou inacessíveis;
-- botões sem destino claro;
-- responsividade quebrada.
+### 2. Causas sistêmicas primeiro
+Antes de microajustes, verifique se o problema vem de conceito inconsistente, tipografia sem hierarquia, composição repetitiva, imagens sem direção, paleta sem função, componentes iguais em excesso ou páginas internas achatadas. Corrija nos padrões compartilhados (tokens, componentes), não seção por seção. Se a própria direção for insuficiente, proponha revisão formal e peça aprovação antes de mudar o conceito.
 
-Não adicione efeitos de scroll apenas por decoração. Prefira movimento discreto, respeite `prefers-reduced-motion` e garanta que o conteúdo continue acessível sem animação.
+### 3. Imagens e ativos
+Priorize ativos reais e licenciados. Imagem nova necessária: registre finalidade, estilo, dimensões e fonte planejada. Verifique proporção, crop e resolução. Sem placeholders no resultado apresentado como final.
 
-### 3. Refinar imagens e ativos
-- Priorize ativos reais do cliente e imagens licenciadas/autorizadas.
-- Se for necessária imagem nova, registre a necessidade, finalidade, estilo, dimensões e fonte planejada.
-- Não invente provas sociais, fotografias de equipe, instalações ou clientes.
-- Evite placeholders no resultado que será apresentado como final.
-- Verifique proporção, crop, resolução e contexto.
+### 4. Movimento
+Sem efeitos de scroll decorativos; movimento discreto, `prefers-reduced-motion` respeitado e conteúdo acessível sem animação.
 
-### 4. Validar após alterações
-Se navegador disponível:
-- inspecione desktop e mobile;
-- verifique as correções contra os critérios de aceite;
-- confirme que navegação/CTAs não regrediram;
-- faça nova captura para comparação, se possível.
-
-Não afirme que o resultado está visualmente validado sem inspeção visual.
+### 5. Revalidar
+Capture apenas as seções alteradas (375 e 1440 px); confira navegação e CTAs pelo DOM para detectar regressões. Atualize o resultado de cada item AD-xx afetado com o status padrão. Código alterado não significa qualidade visual validada.
 
 ## Artefatos
 
-- Atualize os arquivos do protótipo.
-- Crie/atualize `06-refinamento/refinement-log.md`.
-- Atualize `04-prototipo/prototype-spec.md` se houver mudanças.
-- Registre correções não executadas e por quê.
+Arquivos do protótipo atualizados; `06-refinamento/refinement-log.md` (resumo para próximas etapas, tarefas e status, correções não executadas e por quê, checklist atualizado); `prototype-spec.md` se houver mudanças.
 
 ## Gate
 
-Nenhum bloqueador deve permanecer sem justificativa explícita. Se houver alterações estruturais ou de copy, compare com a estratégia e registre a aprovação necessária.
-
-Finalize recomendando `/redesign-agency:implementacao`.
+Nenhum bloqueador sem justificativa explícita. Alterações estruturais ou de copy são comparadas à estratégia e registradas para aprovação. Recomende `/redesign-agency:implementacao`.

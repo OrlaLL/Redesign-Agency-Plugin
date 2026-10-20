@@ -1,0 +1,21 @@
+Redesign Agency Plugin POC - arquivos incluídos
+
+README.md
+templates/acceptance-criteria-template.md
+templates/asset-inventory-template.csv
+templates/content-matrix-template.csv
+templates/cta-map-template.csv
+templates/decisions-log-template.md
+templates/evidence-register-template.csv
+templates/page-inventory-template.csv
+templates/project-status-template.md
+.claude-plugin/plugin.json
+skills/prototipo/SKILL.md
+skills/conteudo/SKILL.md
+skills/revisao/SKILL.md
+skills/auditoria/SKILL.md
+skills/project-governance/SKILL.md
+skills/refinamento/SKILL.md
+skills/implementacao/SKILL.md
+skills/estrategia/SKILL.md
+FILE-INVENTORY.txt
